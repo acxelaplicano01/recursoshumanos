@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('CodigoEmpleado');
             $table->string('EstadoEmpleado');
             $table->string('DNI');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('correo');
-            $table->date('Fecha de nacimiento');
+            $table->string('Nombre');
+            $table->string('Apellido');
+            $table->string('Correo');
+            $table->date('FechaNacimiento');
             $table->string('Sexo');
             $table->string('Direccion');
             $table->string('Telefono');

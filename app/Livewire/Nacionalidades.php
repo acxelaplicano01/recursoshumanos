@@ -52,7 +52,7 @@ class Nacionalidades extends Component
     {
         $nacionalidad = Nacionalidad::findOrFail($id);
         $this->nacionalidad_id = $id;
-        $this->NombreNacionalidad = $nacionalidad->NombreNacionalidadS;
+        $this->NombreNacionalidad = $nacionalidad->NombreNacionalidad;
     
         $this->openModal();
     }

@@ -43,7 +43,7 @@ class EstadosCiviles extends Component
         ]);
   
         session()->flash('message', 
-            $this->nacionalidad_id ? 'Estado civil Actualizado correctamente!' : 'Estado civil creado correctamente!');
+            $this->estadocivil_id ? 'Estado civil Actualizado correctamente!' : 'Estado civil creado correctamente!');
   
         $this->closeModal();
         $this->resetInputFields();

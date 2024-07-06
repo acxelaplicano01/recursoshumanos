@@ -77,7 +77,7 @@ class Empleados extends Component
         ]);
   
         session()->flash('message', 
-            $this->nacionalidad_id ? 'Empleado Actualizado correctamente!' : 'Empleado creado correctamente!');
+            $this->empleado_id ? 'Empleado Actualizado correctamente!' : 'Empleado creado correctamente!');
   
         $this->closeModal();
         $this->resetInputFields();
