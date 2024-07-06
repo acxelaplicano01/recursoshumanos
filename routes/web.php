@@ -1,6 +1,9 @@
 <?php
 
+use App\Livewire\Empleados;
+use App\Livewire\EstadosCiviles;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Nacionalidades;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,4 +17,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/nacionalidad', Nacionalidades::class)->name('nacionalidad');
+    Route::get('/estadocivil', EstadosCiviles::class)->name('estadocivil');
+    Route::get('/empleado', Empleados::class)->name('empleado');
 });
