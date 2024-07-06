@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             NacionalidadesTableSeeder::class,
             EstadosCivilesTableSeeder::class,
-            //EmpleadosTableSeeder::class,
+            EmpleadosTableSeeder::class,
         ]);
     }
 }
