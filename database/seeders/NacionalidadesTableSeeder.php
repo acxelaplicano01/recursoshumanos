@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-use Database\Factories\NacionalidadesFactory;   
+use Illuminate\Database\Seeder;  
+use App\Models\Nacionalidad;
 
 class NacionalidadesTableSeeder extends Seeder
 {
@@ -13,6 +13,6 @@ class NacionalidadesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        NacionalidadesFactory::factory()->count(50)->create();
+        Nacionalidad::factory()->count(50)->create();
     }
 }

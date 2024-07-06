@@ -3,12 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\EstadosCiviles;  
+use App\Models\EstadoCivil;  
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\EstadoCivil>
  */
-class EstadosCivilesFactory extends Factory
+class EstadoCivilFactory extends Factory
 {
     /**
      * Define the model's default state.
