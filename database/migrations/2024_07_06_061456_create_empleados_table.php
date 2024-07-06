@@ -23,11 +23,14 @@ return new class extends Migration
             $table->string('Sexo');
             $table->string('Direccion');
             $table->string('Telefono');
-            $table->unsignedBigInteger('created_by')->nullable();
+            $table->integer("created_by");
+            $table->integer("deleted_by")->nullable();
+            $table->integer("updated_by")->nullable();
             $table->unsignedBigInteger('IdNacionalidad');
             $table->unsignedBigInteger('IdEstadoCivil');
             $table->foreign('IdNacionalidad')->references('id')->on('nacionalidads');
             $table->foreign('IdEstadoCivil')->references('id')->on('estado_civils');
+            $table->softDeletes();
             $table->timestamps();
         });
         

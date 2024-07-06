@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             NacionalidadesTableSeeder::class,
             EstadosCivilesTableSeeder::class,
             EmpleadosTableSeeder::class,
+            UserTableSeeder::class,
         ]);
     }
 }

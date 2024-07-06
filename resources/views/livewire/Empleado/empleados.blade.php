@@ -20,7 +20,7 @@
 
             
             @if($isOpen)
-                @include('livewire.Empleados.createempleado')
+                @include('livewire.Empleado.createempleado')
             @endif
     
             

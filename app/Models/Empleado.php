@@ -10,6 +10,6 @@ class Empleado extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable = ['CodigoEmpleado', 'EstadoEmpleado', 'DNI', 'Nombre', 'Apellido', 'Correo', 'FechaNacimiento', 'Sexo', 'Direccion', 'Telefono', 'Nacionalidad_id', 'EstadoCivil_id', 'created_by'];
+    protected $fillable = ['CodigoEmpleado', 'EstadoEmpleado', 'DNI', 'Nombre', 'Apellido', 'Correo', 'FechaNacimiento', 'Sexo', 'Direccion', 'Telefono', 'Nacionalidad_id', 'EstadoCivil_id'];
     
 }

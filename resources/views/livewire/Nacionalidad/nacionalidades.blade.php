@@ -20,7 +20,7 @@
 
             
             @if($isOpen)
-                @include('livewire.Nacionalidad.create')
+                @include('livewire.Nacionalidad.createnacionalidades')
             @endif
     
             

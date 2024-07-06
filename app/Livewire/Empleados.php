@@ -8,11 +8,11 @@ use App\Models\Empleado;
 class Empleados extends Component
 {
     use WithPagination;
-    public $Nombre, $Apellido, $CodigoEmpleado, $EstadoEmpleado, $DNI, $Correo, $FechaNacimiento, $Sexo, $Direccion, $Telefono, $IdNacionalidad, $IdEstadoCivil, $empleado_id, $search;
+    public  $CodigoEmpleado, $EstadoEmpleado, $DNI, $Nombre, $Apellido, $Correo, $FechaNacimiento, $Sexo, $Direccion, $Telefono, $IdNacionalidad, $IdEstadoCivil, $empleado_id, $search;
     public $isOpen = 0;
     public function render()
     {
-        $empleados = Empleado::where('nombre', 'like', '%'.$this->search.'%')->orderBy('id','DESC')->paginate(5);
+        $empleados = Empleado::where('Nombre', 'like', '%'.$this->search.'%')->orderBy('id','DESC')->paginate(5);
         return view('livewire.Empleado.empleados', ['empleados' => $empleados]);
     }
     public function create()
@@ -61,12 +61,12 @@ class Empleados extends Component
             'IdEstadoCivil' => 'required',
         ]);
    
-        Empleado::updateOrCreate(['id' => $this->nacionalidad_id], [
+        Empleado::updateOrCreate(['id' => $this->empleado_id], [
             'CodigoEmpleado' => $this->CodigoEmpleado,
             'EstadoEmpleado' => $this->EstadoEmpleado,
             'DNI' => $this->DNI,
-            'Nombre' => $this->nombre,
-            'Apellido' => $this->apellido,
+            'Nombre' => $this->Nombre,
+            'Apellido' => $this->Apellido,
             'Correo' => $this->Correo,
             'FechaNacimiento' => $this->FechaNacimiento,
             'Sexo' => $this->Sexo,
