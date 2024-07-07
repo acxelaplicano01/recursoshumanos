@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\Nacionalidad;
+use App\Models\EstadoCivil;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,6 +17,8 @@ class EmpleadoFactory extends Factory
      */
     public function definition(): array
     {
+        $Nacionalidad = Nacionalidad::inRandomOrder()->first()->id;
+        $EstadoCivil = EstadoCivil::inRandomOrder()->first()->id;
         return [
             'CodigoEmpleado' => $this->faker->word,
             'EstadoEmpleado' => $this->faker->word,
@@ -27,8 +30,8 @@ class EmpleadoFactory extends Factory
             'Sexo' => $this->faker->word,
             'Direccion' => $this->faker->word,
             'Telefono' => $this->faker->numerify('########'),
-            'IdNacionalidad' => 2,
-            'IdEstadoCivil' => 3,
+            'IdNacionalidad' => $Nacionalidad,
+            'IdEstadoCivil' => $EstadoCivil,
             'created_by' => 1,
            
 

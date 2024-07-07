@@ -104,8 +104,8 @@
                         <td class="px-6 py-4">{{ $empleado->Sexo }}</td>
                         <td class="px-6 py-4">{{ $empleado->Direccion }}</td>
                         <td class="px-6 py-4">{{ $empleado->Telefono }}</td>
-                        <td class="px-6 py-4">{{ $empleado->IdNacionalidad }}</td>
-                        <td class="px-6 py-4">{{ $empleado->IdEstadoCivil }}</td>
+                        <td class="px-6 py-4">{{ $empleado->nacionalidad->NombreNacionalidad }}</td>
+                        <td class="px-6 py-4">{{ $empleado->estadocivil->NombreEstadoCivil }}</td>
                         <td class="px-6 py-4">
                         <button wire:click="edit({{ $empleado->id }})" class="font-medium text-blue-600 hover:underline">Editar</button>
                             <button wire:click="delete({{ $empleado->id }})" class="font-medium text-red-600 hover:underline">Borrar</button>

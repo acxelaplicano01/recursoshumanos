@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Livewire;
+use App\Models\EstadoCivil;
+use App\Models\Nacionalidad;
 use Livewire\WithPagination;
 use Livewire\Component;
 use App\Models\Empleado;
@@ -12,9 +14,21 @@ class Empleados extends Component
     public $isOpen = 0;
     public function render()
     {
-        $empleados = Empleado::where('Nombre', 'like', '%'.$this->search.'%')->orderBy('id','DESC')->paginate(5);
+        $empleados = Empleado::with('nacionalidad', 'estadocivil')
+                            ->where('Nombre', 'like', '%'.$this->search.'%')
+                            ->orderBy('id','DESC')
+                            ->paginate(5);
         return view('livewire.Empleado.empleados', ['empleados' => $empleados]);
     }
+
+    public $nacionalidades, $estadosciviles;
+
+    public function mount()
+    {
+        $this->nacionalidades = Nacionalidad::all();
+        $this->estadosciviles = EstadoCivil::all();  
+    }
+
     public function create()
     {
         $this->resetInputFields();

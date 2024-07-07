@@ -102,21 +102,25 @@
                             @error('Telefono') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
                         <div class="mb-4">
-                            <label for="exampleFormControlInput1"
-                                class="block text-gray-700 text-sm font-bold mb-2">Nacionalidad:</label>
-                            <input type="text"
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="exampleFormControlInput1" placeholder="Ingresar nacionalidad" wire:model="IdNacionalidad">
-                            @error('IdNacionalidad') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <label for="departamentoSelect" class="block text-gray-700 text-sm font-bold mb-2">Nacionalidad:</label>
+                        <select  wire:model="IdNacionalidad" id="nacionalidadSelect" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" wire:model="nacionalidad">
+                            <option value="">Seleccionar nacionalidad</option>
+                            @foreach($nacionalidades as $nacion)
+                                <option value="{{ $nacion->id }}">{{ $nacion->NombreNacionalidad }}</option> 
+                            @endforeach
+                        </select>
+                        @error('nacionalidad') <span class="text-red-500">{{ $message }}</span> @enderror
                         </div>
                         <div class="mb-4">
-                            <label for="exampleFormControlInput1"
-                                class="block text-gray-700 text-sm font-bold mb-2">Estado Civil:</label>
-                            <input type="text"
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="exampleFormControlInput1" placeholder="Ingresar estado civil" wire:model="IdEstadoCivil">
-                            @error('IdEstadoCivil') <span class="text-red-500">{{ $message }}</span>@enderror
-                        </div>
+                        <label for="estadocivilSelect" class="block text-gray-700 text-sm font-bold mb-2">Estado Civil:</label>
+                        <select  wire:model="IdEstadoCivil" id="departamentoSelect" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" wire:model="estadocivil">
+                            <option value="">Seleccione estado civil</option>s
+                            @foreach($estadosciviles as $estadocivil)
+                                <option value="{{ $estadocivil->id }}">{{ $estadocivil->NombreEstadoCivil }}</option> 
+                            @endforeach
+                        </select>
+                        @error('estadocivil') <span class="text-red-500">{{ $message }}</span> @enderror
+                    </div>
                     </div>
                 </div>
 
