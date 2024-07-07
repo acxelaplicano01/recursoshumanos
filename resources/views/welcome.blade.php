@@ -197,7 +197,6 @@
         <span id="close-menu-btn" class="material-symbols-outlined">close</span>
         <li><a href="/">Home</a></li>
         <li><a href="/login">Acceder</a></li>
-        <li><a href="#">Acerca de</a></li>
       </ul>
       <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
     </nav>
