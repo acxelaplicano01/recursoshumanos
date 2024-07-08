@@ -50,10 +50,13 @@
                     No.
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Codigo Empleado
+                    Empleado
                 </th>
                 <th scope="col" class="px-6 py-3">
-                Estado Empleado
+                    Codigo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Estado
                 </th>
                 <th scope="col" class="px-6 py-3">
                     DNI
@@ -63,9 +66,6 @@
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Apellido
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Correo
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Fecha Nacimiento
@@ -94,12 +94,18 @@
         @foreach($empleados as $empleado)
                     <tr class="bg-white border-b hover:bg-gray-50">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ $empleado->id }}</th>
+                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full" src="https://th.bing.com/th/id/OIP.DyNgRQ_QqXuo818MZZqLyQAAAA?w=450&h=450&rs=1&pid=ImgDetMain" alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">{{ $empleado->Nombre }} {{ $empleado->Apellido }}</div>
+                        <div class="font-normal text-gray-500">{{ $empleado->Correo }}</div>
+                    </div>  
+                </th>               
                         <td class="px-6 py-4">{{ $empleado->CodigoEmpleado }}</td>
                         <td class="px-6 py-4">{{ $empleado->EstadoEmpleado }}</td>
                         <td class="px-6 py-4">{{ $empleado->DNI }}</td>
                         <td class="px-6 py-4">{{ $empleado->Nombre }}</td>
                         <td class="px-6 py-4">{{ $empleado->Apellido }}</td>
-                        <td class="px-6 py-4">{{ $empleado->Correo }}</td>
                         <td class="px-6 py-4">{{ $empleado->FechaNacimiento }}</td>
                         <td class="px-6 py-4">{{ $empleado->Sexo }}</td>
                         <td class="px-6 py-4">{{ $empleado->Direccion }}</td>
